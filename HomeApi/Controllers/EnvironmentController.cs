@@ -14,7 +14,7 @@ namespace HomeApi.Controllers
         public async Task<IHttpActionResult> Ping()
         {
             await Task.Delay(10);
-            return Ok(DateTime.UtcNow.ToShortTimeString());
+            return Ok(DateTime.UtcNow.ToShortTimeString() + Request.RequestUri);
         }
 
         [HttpPost]
